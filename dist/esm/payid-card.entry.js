@@ -1,4 +1,4 @@
-import { r as registerInstance, h, g as getAssetPath, H as Host, c as getElement } from './index-059147a4.js';
+import { r as registerInstance, h, H as Host, g as getElement } from './index-0f689585.js';
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -1868,13 +1868,13 @@ const PayIDCard = class {
     }
     renderModal() {
         const self = this;
-        return h("div", { class: this.showCard ? 'modal shown' : 'modal hidden' }, h("div", { class: "modal-content" }, h("a", { href: "https://payid.org/" }, h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: getAssetPath(`./assets/${this.payIDLogo}`) })), h("span", { class: "close", onClick: () => self.hideModal() }, "\u00D7"), h("div", { class: "payid-card mdl-card" }, h("div", { class: "mdl-card__supporting-text payid-card-title " }, self.getPayId()), self.resolvedPayID.addresses.map((address) => {
+        return h("div", { class: this.showCard ? 'modal shown' : 'modal hidden' }, h("div", { class: "modal-content" }, h("a", { href: "https://payid.org/" }, h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' })), h("span", { class: "close", onClick: () => self.hideModal() }, "\u00D7"), h("div", { class: "payid-card mdl-card" }, h("div", { class: "mdl-card__supporting-text payid-card-title " }, self.getPayId()), self.resolvedPayID.addresses.map((address) => {
             return self.renderAddress(address);
         }), h("div", { class: "mdl-card__actions mdl-card--border" }, h("div", { class: "mdl-card__supporting-text ", style: { fontSize: '12px' } }, "This is a ", h("a", { href: "https://github.com/payburner/payburner-payid-card" }, "PayID Card"), " offered by ", h("a", { href: "https://www.payburner.com" }, "Payburner"), ".")))));
     }
     render() {
         const self = this;
-        return h(Host, { payid: this.payid }, h("span", { class: "mdl-chip mdl-chip--contact payid-chip", onClick: () => self.showModal() }, h("img", { class: "mdl-chip__contact", src: getAssetPath(`./assets/${this.payIDLogo}`) }), h("span", { class: "mdl-chip__text" }, self.getPayId())), self.showCard ? (self.renderModal()) : null);
+        return h(Host, { payid: this.payid }, h("span", { class: "mdl-chip mdl-chip--contact payid-chip", onClick: () => self.showModal() }, h("img", { class: "mdl-chip__contact", src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' }), h("span", { class: "mdl-chip__text" }, self.getPayId())), self.showCard ? (self.renderModal()) : null);
     }
     static get assetsDirs() { return ["assets"]; }
     get el() { return getElement(this); }

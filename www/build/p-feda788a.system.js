@@ -1,1 +1,0 @@
-System.register(["./p-be312b00.system.js"],(function(){"use strict";var e,t;return{setters:[function(n){e=n.p;t=n.b}],execute:function(){e().then((function(e){return t([["p-95245492.system",[[1,"payid-card",{payid:[1],tolerant:[4],payIDLogo:[32],payIDClient:[32],resolvedPayID:[32],showCard:[32]}]]]],e)}))}}}));

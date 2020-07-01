@@ -1,4 +1,4 @@
-import {Component, Element, getAssetPath, h, Host, Prop, State} from '@stencil/core';
+import {Component, Element, h, Host, Prop, State} from '@stencil/core';
 import {PayIDClient} from "@payburner/payburner-payid-client/dist/index";
 import copy from 'copy-text-to-clipboard';
 import {ResolvedPayID} from "@payburner/payburner-payid-client/dist/types/model/impl/ResolvedPayID";
@@ -100,7 +100,7 @@ export class PayIDCard {
         const self = this;
        return <div class={this.showCard? 'modal shown' : 'modal hidden'}>
             <div class="modal-content">
-                <a href="https://payid.org/"><img class="mdl-chip__contact" style={{float: 'left'}} src={getAssetPath(`./assets/${this.payIDLogo}`)}></img></a>
+                <a href="https://payid.org/"><img class="mdl-chip__contact" style={{float: 'left'}} src={'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png'}></img></a>
                 <span class="close" onClick={()=>self.hideModal()}>&times;</span>
                 <div class="payid-card mdl-card">
 
@@ -128,7 +128,7 @@ export class PayIDCard {
             return <Host payid={this.payid} >
 
             <span class="mdl-chip mdl-chip--contact payid-chip" onClick={()=>self.showModal()}>
-                <img class="mdl-chip__contact" src={getAssetPath(`./assets/${this.payIDLogo}`)}></img>
+                <img class="mdl-chip__contact" src={'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png'}></img>
                 <span class="mdl-chip__text">{self.getPayId()}</span>
             </span>
 

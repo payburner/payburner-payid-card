@@ -1,4 +1,4 @@
-import { Component, Element, getAssetPath, h, Host, Prop, State } from '@stencil/core';
+import { Component, Element, h, Host, Prop, State } from '@stencil/core';
 import { PayIDClient } from "@payburner/payburner-payid-client/dist/index";
 import copy from 'copy-text-to-clipboard';
 export class PayIDCard {
@@ -62,7 +62,7 @@ export class PayIDCard {
         return h("div", { class: this.showCard ? 'modal shown' : 'modal hidden' },
             h("div", { class: "modal-content" },
                 h("a", { href: "https://payid.org/" },
-                    h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: getAssetPath(`./assets/${this.payIDLogo}`) })),
+                    h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' })),
                 h("span", { class: "close", onClick: () => self.hideModal() }, "\u00D7"),
                 h("div", { class: "payid-card mdl-card" },
                     h("div", { class: "mdl-card__supporting-text payid-card-title " }, self.getPayId()),
@@ -81,7 +81,7 @@ export class PayIDCard {
         const self = this;
         return h(Host, { payid: this.payid },
             h("span", { class: "mdl-chip mdl-chip--contact payid-chip", onClick: () => self.showModal() },
-                h("img", { class: "mdl-chip__contact", src: getAssetPath(`./assets/${this.payIDLogo}`) }),
+                h("img", { class: "mdl-chip__contact", src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' }),
                 h("span", { class: "mdl-chip__text" }, self.getPayId())),
             self.showCard ? (self.renderModal()) : null);
     }

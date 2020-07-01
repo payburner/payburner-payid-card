@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const index = require('./index-9e25d712.js');
+const index = require('./index-10603180.js');
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -1872,13 +1872,13 @@ const PayIDCard = class {
     }
     renderModal() {
         const self = this;
-        return index.h("div", { class: this.showCard ? 'modal shown' : 'modal hidden' }, index.h("div", { class: "modal-content" }, index.h("a", { href: "https://payid.org/" }, index.h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: index.getAssetPath(`./assets/${this.payIDLogo}`) })), index.h("span", { class: "close", onClick: () => self.hideModal() }, "\u00D7"), index.h("div", { class: "payid-card mdl-card" }, index.h("div", { class: "mdl-card__supporting-text payid-card-title " }, self.getPayId()), self.resolvedPayID.addresses.map((address) => {
+        return index.h("div", { class: this.showCard ? 'modal shown' : 'modal hidden' }, index.h("div", { class: "modal-content" }, index.h("a", { href: "https://payid.org/" }, index.h("img", { class: "mdl-chip__contact", style: { float: 'left' }, src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' })), index.h("span", { class: "close", onClick: () => self.hideModal() }, "\u00D7"), index.h("div", { class: "payid-card mdl-card" }, index.h("div", { class: "mdl-card__supporting-text payid-card-title " }, self.getPayId()), self.resolvedPayID.addresses.map((address) => {
             return self.renderAddress(address);
         }), index.h("div", { class: "mdl-card__actions mdl-card--border" }, index.h("div", { class: "mdl-card__supporting-text ", style: { fontSize: '12px' } }, "This is a ", index.h("a", { href: "https://github.com/payburner/payburner-payid-card" }, "PayID Card"), " offered by ", index.h("a", { href: "https://www.payburner.com" }, "Payburner"), ".")))));
     }
     render() {
         const self = this;
-        return index.h(index.Host, { payid: this.payid }, index.h("span", { class: "mdl-chip mdl-chip--contact payid-chip", onClick: () => self.showModal() }, index.h("img", { class: "mdl-chip__contact", src: index.getAssetPath(`./assets/${this.payIDLogo}`) }), index.h("span", { class: "mdl-chip__text" }, self.getPayId())), self.showCard ? (self.renderModal()) : null);
+        return index.h(index.Host, { payid: this.payid }, index.h("span", { class: "mdl-chip mdl-chip--contact payid-chip", onClick: () => self.showModal() }, index.h("img", { class: "mdl-chip__contact", src: 'https://unpkg.com/@payburner/payburner-payid-card@0.0.1/dist/payid-card/assets/payid.png' }), index.h("span", { class: "mdl-chip__text" }, self.getPayId())), self.showCard ? (self.renderModal()) : null);
     }
     static get assetsDirs() { return ["assets"]; }
     get el() { return index.getElement(this); }

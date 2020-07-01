@@ -1,6 +1,6 @@
 {
   "name": "@payburner/payburner-payid-card",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Payburner PayID Card",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
