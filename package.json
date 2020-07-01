@@ -1,0 +1,38 @@
+{
+  "name": "@payburner/payburner-payid-card",
+  "version": "0.0.1",
+  "description": "Payburner PayID Card",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/payburner/payburner-payid-card",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.12.2",
+    "@types/jest": "24.9.1",
+    "@types/puppeteer": "2.0.1",
+    "jest": "24.9.0",
+    "jest-cli": "^24.9.0",
+    "puppeteer": "2.1.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@payburner/payburner-payid-client": "^1.0.6",
+    "axios": "^0.19.2",
+    "copy-text-to-clipboard": "^2.2.0"
+  }
+}

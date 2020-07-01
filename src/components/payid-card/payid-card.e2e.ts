@@ -1,0 +1,3 @@
+
+describe('pay-button', () => {
+});

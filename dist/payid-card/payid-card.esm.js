@@ -1,0 +1,1 @@
+import{p as a,b as p}from"./p-df876e82.js";a().then(a=>p([["p-0fa02949",[[1,"payid-card",{payid:[1],tolerant:[4],payIDLogo:[32],payIDClient:[32],resolvedPayID:[32],showCard:[32]}]]]],a));
